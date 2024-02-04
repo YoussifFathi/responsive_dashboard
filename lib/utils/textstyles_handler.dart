@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/size_config.dart';
 
-abstract class AppStyles {
+abstract class TextStylesHandler {
   static TextStyle styleRegular16(context) {
     return TextStyle(
       color: const Color(0xFF064060),
