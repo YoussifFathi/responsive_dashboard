@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/models/list_tile_item_model.dart';
+import 'package:responsive_dashboard/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/utils/assets_handler.dart';
 import 'package:responsive_dashboard/views/dashboard/widgets/custom_drawer/custom_list_tile_item.dart';
 
@@ -12,15 +12,15 @@ class CustomDrawerItemsListView extends StatefulWidget {
 }
 
 class _CustomDrawerItemsListViewState extends State<CustomDrawerItemsListView> {
-  static const List<ListTileItemModel> items = [
-    ListTileItemModel(title: 'Dashboard', image: AssetsHandler.imagesDashboard),
-    ListTileItemModel(
+  static const List<DrawerItemModel> items = [
+    DrawerItemModel(title: 'Dashboard', image: AssetsHandler.imagesDashboard),
+    DrawerItemModel(
         title: 'My Transaction', image: AssetsHandler.imagesMyTransctions),
-    ListTileItemModel(
+    DrawerItemModel(
         title: 'Statistics', image: AssetsHandler.imagesStatistics),
-    ListTileItemModel(
+    DrawerItemModel(
         title: 'Wallet Account', image: AssetsHandler.imagesWalletAccount),
-    ListTileItemModel(
+    DrawerItemModel(
         title: 'My Investments', image: AssetsHandler.imagesMyInvestments),
   ];
   int currentIndex = 0;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/models/list_tile_item_model.dart';
+import 'package:responsive_dashboard/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/utils/assets_handler.dart';
 import 'package:responsive_dashboard/views/dashboard/widgets/custom_drawer/custom_drawer_header.dart';
 import 'package:responsive_dashboard/views/dashboard/widgets/custom_drawer/custom_drawer_item_list_view.dart';
@@ -25,13 +25,13 @@ class CustomDrawer extends StatelessWidget {
                   height: 40,
                 )),
                 CustomListTileItem(
-                  listTileItemModel: ListTileItemModel(
+                  listTileItemModel: DrawerItemModel(
                       title: 'Setting system',
                       image: AssetsHandler.imagesSettings),
                   isActive: false,
                 ),
                 CustomListTileItem(
-                  listTileItemModel: ListTileItemModel(
+                  listTileItemModel: DrawerItemModel(
                       title: 'Logout account',
                       image: AssetsHandler.imagesLogout),
                   isActive: false,

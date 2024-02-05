@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'package:responsive_dashboard/models/list_tile_item_model.dart';
+import 'package:responsive_dashboard/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/utils/textstyles_handler.dart';
 
 class CustomListTileItem extends StatelessWidget {
   const CustomListTileItem(
       {super.key, required this.listTileItemModel, required this.isActive});
 
-  final ListTileItemModel listTileItemModel;
+  final DrawerItemModel listTileItemModel;
   final bool isActive;
 
   @override
