@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/views/dashboard/widgets/card_and_income_section/card_and_income_section.dart';
 import 'package:responsive_dashboard/views/dashboard/widgets/custom_drawer/custom_drawer.dart';
 import 'package:responsive_dashboard/views/dashboard/widgets/expenses_and_invoice/expenses_and_invoice_section.dart';
 
@@ -7,11 +8,22 @@ class DesktopDashboardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return  const  Row(
       children: [
-        const Expanded(child: CustomDrawer()),
-        const Expanded(flex: 3,child: ExpensesAndInvoiceSection()),
-        Expanded(flex: 2,child: Container(color: Colors.red,)),
+       Expanded(child: CustomDrawer()),
+        Expanded(
+          flex: 5,
+          child: SingleChildScrollView(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(flex: 3,child: ExpensesAndInvoiceSection()),
+                Expanded(flex: 2,child: CardAndIncomeSection()),
+              ],
+            ),
+          ),
+        ),
+
       ],
     );
   }
