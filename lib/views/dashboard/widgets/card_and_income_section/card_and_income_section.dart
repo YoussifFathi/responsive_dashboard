@@ -14,7 +14,10 @@ class CardAndIncomeSection extends StatelessWidget {
         MyCardSection(),
         SizedBox(height: 24,),
         IncomeSection(),
+        SizedBox(height: 24,),
+
         IncomeSection(),
+        SizedBox(height: 24,),
 
       ],
     );

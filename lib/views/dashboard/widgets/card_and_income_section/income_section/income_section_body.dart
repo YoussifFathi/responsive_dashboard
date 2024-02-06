@@ -10,7 +10,7 @@ class IncomSectionBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const  Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(child: IncomeChart()),

@@ -16,10 +16,14 @@ class CustomListTileItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: ListTile(
-        title: Text(
-          listTileItemModel.title,
-          style: TextStylesHandler.styleRegular16(context).copyWith(
-            color: isActive ? const Color(0xff4EB7F2) : const Color(0xFF064060),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            listTileItemModel.title,
+            style: TextStylesHandler.styleRegular16(context).copyWith(
+              color: isActive ? const Color(0xff4EB7F2) : const Color(0xFF064060),
+            ),
           ),
         ),
         leading: SvgPicture.asset(listTileItemModel.image),

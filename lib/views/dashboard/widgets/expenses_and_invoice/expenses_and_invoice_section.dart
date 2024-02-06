@@ -7,17 +7,15 @@ class ExpensesAndInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(40),
-      child: const Column(
-        children: [
-          CustomExpensesContainer(),
-          SizedBox(
-            height: 40,
-          ),
-          CustonInvoiceContainer(),
-        ],
-      ),
+    return const Column(
+      children: [
+
+        CustomExpensesContainer(),
+        SizedBox(
+          height: 40,
+        ),
+        CustonInvoiceContainer(),
+      ],
     );
   }
 }

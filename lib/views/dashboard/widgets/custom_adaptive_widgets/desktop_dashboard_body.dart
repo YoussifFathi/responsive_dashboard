@@ -8,24 +8,34 @@ class DesktopDashboardBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const  Row(
+    return const Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       Expanded(child: CustomDrawer()),
+        Expanded(child: CustomDrawer()),
         Expanded(
           flex: 5,
           child: SingleChildScrollView(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(flex: 3,child: ExpensesAndInvoiceSection()),
-                Expanded(flex: 2,child: CardAndIncomeSection()),
+                SizedBox(width: 32,),
+                Expanded(flex: 3, child: Column(
+                  children: [
+                    SizedBox(
+                      height: 40,
+                    ),
+                    ExpensesAndInvoiceSection(),
+                  ],
+                )),
+                SizedBox(width: 24,),
+                Expanded(flex: 2, child: CardAndIncomeSection()),
+                SizedBox(width: 32,),
+
               ],
             ),
           ),
         ),
-
       ],
     );
   }
 }
-

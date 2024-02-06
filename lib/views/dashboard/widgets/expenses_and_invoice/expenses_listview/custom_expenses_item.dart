@@ -31,22 +31,24 @@ class CustomExpensesItem extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  radius: 30,
-                  backgroundColor: const Color(0xffFAFAFA),
-                  child: SvgPicture.asset(expensesItemModel.imageUrl),
+                Flexible(
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: const Color(0xffFAFAFA),
+                    child: SvgPicture.asset(expensesItemModel.imageUrl),
+                  ),
                 ),
-                const Icon(Icons.arrow_forward_ios_rounded)
+                const Center(child:  Icon(Icons.arrow_forward_ios_rounded,))
               ],
             ),
             const SizedBox(height: 30,),
-            Text(expensesItemModel.title,style: TextStylesHandler.styleMedium16(context),),
+            FittedBox(fit: BoxFit.scaleDown,child: Text(expensesItemModel.title,style: TextStylesHandler.styleMedium16(context),)),
             const SizedBox(height: 8,),
 
             Text(expensesItemModel.date,style: TextStylesHandler.styleRegular14(context),),
             const SizedBox(height: 16,),
 
-            Text(expensesItemModel.balance,style: TextStylesHandler.styleSemiBold24(context),),
+            FittedBox(fit: BoxFit.scaleDown,child: Text(expensesItemModel.balance,style: TextStylesHandler.styleSemiBold24(context),)),
 
 
           ],

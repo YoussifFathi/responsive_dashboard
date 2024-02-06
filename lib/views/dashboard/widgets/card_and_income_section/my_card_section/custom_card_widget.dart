@@ -14,7 +14,7 @@ class CustomCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // margin:const EdgeInsets.all(24) ,
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16,),
         color: const Color(0xff4EB7F2),
